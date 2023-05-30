@@ -73,6 +73,52 @@ $npx svelte-add@latest tailwindcss
 $npm i
 ```
 
+## Установка Skeleton
+
+```bash
+$npm i -D @skeletonlabs/skeleton
+```
+
+- подключение стилей в `src/routes/+layout.svelte`
+
+```diff
+# src/routes/+layout.svelte
++// Your selected Skeleton theme:
++import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
++
++// This contains the bulk of Skeletons required styles:
++// NOTE: this will be renamed skeleton.css in the v2.x release.
++import '@skeletonlabs/skeleton/styles/skeleton.css';
++
++// Finally, your application's global stylesheet (sometimes labeled 'app.css')
+import '../app.postcss';
+```
+
+- изменение конфигурации  `tailwind.config.cjs`
+
+```diff
+# tailwind.config.cjs
+ const config = {
+-	content: ['./src/**/*.{html,js,svelte,ts}'],
++	// 1. Apply the dark mode class setting:
++	darkMode: 'class',
++	content: [
++		'./src/**/*.{html,js,svelte,ts}',
++		// 2. Append the path for the Skeleton NPM package and files:
++		require('path').join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
++	],
+
+ 	theme: {
+ 		extend: {}
+ 	},
+
+-	plugins: []
++	plugins: [
++		// 3. Append the Skeleton plugin to the end of this list
++		...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()
++	]
+ };
+```
 ## Локальная установка расширения
 
 - выполнить сборку
@@ -124,4 +170,5 @@ You can preview the production build with `npm run preview`.
 <div align="center">
 <img title="Svelte" alt="Svelte"  height=48 width=48 src="https://avatars.githubusercontent.com/u/23617963?s=200&v=4"/>
 <img title="Tailwind" alt="Tailwind" height=48 width=48 src="https://avatars.githubusercontent.com/u/67109815?s=200&v=4"/>
+<img title="Skeleton" alt="Skeleton"  height=48 width=48 src="https://avatars.githubusercontent.com/u/118298875?s=200&v=4"/>
 </div>
