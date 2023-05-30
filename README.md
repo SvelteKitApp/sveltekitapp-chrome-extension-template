@@ -64,6 +64,15 @@ $echo '{}' >> ./static/manifest.json
 +}
 ```
 
+## Установка `Tailwind CSS` Framework
+
+- установка `Tailwind CSS`
+
+```bash
+$npx svelte-add@latest tailwindcss
+$npm i
+```
+
 ## Локальная установка расширения
 
 - выполнить сборку
@@ -111,3 +120,8 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+<div align="center">
+<img title="Svelte" alt="Svelte"  height=48 width=48 src="https://avatars.githubusercontent.com/u/23617963?s=200&v=4"/>
+<img title="Tailwind" alt="Tailwind" height=48 width=48 src="https://avatars.githubusercontent.com/u/67109815?s=200&v=4"/>
+</div>
