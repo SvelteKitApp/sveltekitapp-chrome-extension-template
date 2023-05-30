@@ -10,6 +10,8 @@
 
 ```bash
 $npm i -D sveltekit-adapter-chrome-extension
+# дополнительная зависимость для работы с TypeScript
+$npm i -D @types/chrome
 ```
 
 - настройка адаптера сборки
@@ -146,6 +148,11 @@ npm run dev
 # опция для открытия страницы в браузере
 npm run dev -- --open
 ```
+
+## Источники информации
+
+- [developer.chrome.com/docs/extensions/mv3](https://developer.chrome.com/docs/extensions/mv3/declare_permissions/)
+- [skeleton.dev](https://www.skeleton.dev)
 
 <div align="center">
 <img title="Svelte" alt="Svelte"  height=48 width=48 src="https://avatars.githubusercontent.com/u/23617963?s=200&v=4"/>
