@@ -94,7 +94,7 @@ $npm i -D @skeletonlabs/skeleton
 import '../app.postcss';
 ```
 
-- изменение конфигурации  `tailwind.config.cjs`
+- изменение конфигурации `tailwind.config.cjs`
 
 ```diff
 # tailwind.config.cjs
@@ -119,12 +119,15 @@ import '../app.postcss';
 +	]
  };
 ```
+
 ## Локальная установка расширения
 
 - выполнить сборку
 
 ```bash
-$npm run  build
+$npm run build
+# предварительный просмотр сборки на странице браузера
+$npm run preview
 ```
 
 - открыть в chrome браузере `chrome://extensions/`
@@ -132,40 +135,17 @@ $npm run  build
 - выполнить действие "Загрузить расспакованное расширение"
 - выбрать диеруторию `./build`
 
-## Creating a project
+## Разработка
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- скопировать репозиторий
+- установить зависимости
+- запустить локальной для проверки работы UI
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
+# опция для открытия страницы в браузере
 npm run dev -- --open
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
 <div align="center">
 <img title="Svelte" alt="Svelte"  height=48 width=48 src="https://avatars.githubusercontent.com/u/23617963?s=200&v=4"/>
