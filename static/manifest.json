@@ -1,1 +1,14 @@
-{}
+{
+  "manifest_version": 3,
+  "version": "0.0.1",
+  "name": "sveltekitapp-chrome-extension-template",
+  "description": "Шаблон Chrome extension с использованием Sveltekit",
+  "icons": {
+    "32": "favicon.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "favicon.png",
+    "default_title": "sveltekitapp-chrome-extension-template"
+  }
+}
